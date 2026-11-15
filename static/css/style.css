@@ -195,6 +195,9 @@ a { color: inherit; text-decoration: none; }
     border-radius: 14px;
     font-size: 1.1rem;
     font-weight: 500;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
     text-decoration: none;
     transition: background 0.2s;
 }
@@ -610,6 +613,59 @@ a { color: inherit; text-decoration: none; }
 }
 
 .legal a:hover { color: var(--accent-2); }
+
+/* ------------------------------------------------------------------ */
+/* Video modal                                                         */
+/* ------------------------------------------------------------------ */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(15, 15, 15, 0.75);
+}
+
+.modal[hidden] { display: none; }
+
+.modal-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+}
+
+.modal-video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.modal-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: -2.75rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.25rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-close:hover { color: var(--accent-2); }
 
 /* ------------------------------------------------------------------ */
 /* Responsive                                                          */
